@@ -1,0 +1,397 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #FFFFFF;
+    font-family: 'Arial', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Заголовок в самом верху */
+.main-header {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    border-bottom: 2px solid #333;
+}
+
+.main-header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.main-header h2 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    color: #cccccc;
+    letter-spacing: 3px;
+}
+
+/* Основной текст */
+.main-text {
+    margin-bottom: 50px;
+    padding: 0 20px;
+}
+
+.main-text p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    color: #aaaaaa;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Музыкальный плеер */
+.music-player {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 1px solid #333;
+}
+
+.player-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Левая секция: название над обложкой, артист под обложкой */
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Уменьшаем расстояние между элементами */
+    flex-shrink: 0;
+    width: 120px;
+}
+
+/* Название трека над обложкой */
+.track-title-container {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.track-title-container h3 {
+    font-size: 1.3em;
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-cover {
+    position: relative;
+    cursor: pointer;
+}
+
+.album-cover img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+    border: 3px solid #444;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.cover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.album-cover:hover .cover-overlay {
+    opacity: 1;
+}
+
+.cover-overlay i {
+    font-size: 2em;
+    color: white;
+}
+
+.artist-name p {
+    font-size: 1em;
+    color: #bbbbbb;
+    margin: 0;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Центральная секция */
+.center-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+}
+
+/* Прогресс бар - ДЛИННЕЕ */
+.progress-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Уменьшаем gap для longer дорожки */
+    margin-top: 109px;
+}
+
+/* Контейнер для кнопок */
+.controls-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+/* Кнопки управления */
+.player-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.control-btn {
+    background: none;
+    border: none;
+    color: #ccc;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control-btn:hover {
+    color: #fff;
+    background-color: #2a2a2a;
+}
+
+.play-pause {
+    background-color: #1DB954;
+    color: black;
+    width: 50px;
+    height: 50px;
+    font-size: 1.3em;
+}
+
+.play-pause:hover {
+    background-color: #1ed760;
+    transform: scale(1.05);
+}
+
+.time-info {
+    font-size: 0.9em;
+    color: #888;
+    min-width: 25px; /* Уменьшаем для longer дорожки */
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    background-color: #404040;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: height 0.2s ease;
+    position: relative;
+    min-width: 300px; /* Увеличиваем минимальную длину дорожки */
+}
+
+.progress-bar:hover {
+    height: 8px;
+}
+
+.progress {
+    height: 100%;
+    background-color: #1DB954;
+    border-radius: 3px;
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/* Правая секция: громкость */
+.right-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-shrink: 0;
+    width: 150px;
+    margin-top: 108px;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.volume-icon {
+    color: #ccc;
+    font-size: 1.2em;
+    width: 20px;
+}
+
+.volume-slider-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.volume-slider {
+    width: 100px;
+    height: 6px;
+    background-color: #404040;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+}
+
+.volume-progress {
+    height: 100%;
+    background-color: #1DB954;
+    border-radius: 3px;
+    width: 70%;
+    transition: width 0.1s ease;
+}
+
+.volume-slider:hover .volume-progress {
+    background-color: #1ed760;
+}
+
+/* Анимации */
+
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .main-header h1 {
+        font-size: 2.2em;
+    }
+    
+    .main-header h2 {
+        font-size: 1.4em;
+    }
+    
+    .main-text p {
+        font-size: 1.1em;
+    }
+    
+    .music-player {
+        padding: 20px;
+        max-width: 100%;
+    }
+    
+    .player-content {
+        flex-direction: column;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .left-section {
+        width: 100%;
+        order: 1;
+    }
+    
+    .center-section {
+        width: 100%;
+        order: 2;
+    }
+    
+    .right-section {
+        width: 100%;
+        justify-content: center;
+        order: 3;
+        margin-top: 0;
+        align-items: center;
+    }
+    
+    .volume-slider {
+        width: 150px;
+    }
+    
+    .album-cover img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .progress-bar {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .player-controls {
+        gap: 20px;
+    }
+    
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1em;
+    }
+    
+    .play-pause {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .progress-container {
+        gap: 5px;
+    }
+    
+    .time-info {
+        font-size: 0.8em;
+        min-width: 20px;
+    }
+    
+    .track-title-container h3 {
+        font-size: 1.1em;
+    }
+    
+    .artist-name p {
+        font-size: 0.9em;
+    }
+    
+}
