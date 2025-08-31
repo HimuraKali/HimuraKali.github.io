@@ -1,4 +1,4 @@
-/* Сброс стилей */
+
 * {
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
     text-align: center;
 }
 
-/* Заголовок в самом верху */
+
 .main-header {
     margin-bottom: 40px;
     padding: 20px 0;
@@ -43,7 +43,7 @@ body {
     letter-spacing: 3px;
 }
 
-/* Основной текст */
+
 .main-text {
     margin-bottom: 50px;
     padding: 0 20px;
@@ -57,7 +57,7 @@ body {
     margin: 0 auto;
 }
 
-/* Музыкальный плеер */
+
 .music-player {
     background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
     border-radius: 15px;
@@ -75,17 +75,17 @@ body {
     gap: 30px;
 }
 
-/* Левая секция: название над обложкой, артист под обложкой */
+
 .left-section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px; /* Уменьшаем расстояние между элементами */
+    gap: 10px; 
     flex-shrink: 0;
     width: 120px;
 }
 
-/* Название трека над обложкой */
+
 .track-title-container {
     text-align: center;
     margin-bottom: 5px;
@@ -148,7 +148,7 @@ body {
     text-align: center;
 }
 
-/* Центральная секция */
+
 .center-section {
     flex: 1;
     display: flex;
@@ -158,16 +158,16 @@ body {
     min-width: 0;
 }
 
-/* Прогресс бар - ДЛИННЕЕ */
+
 .progress-container {
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 5px; /* Уменьшаем gap для longer дорожки */
+    gap: 5px; 
     margin-top: 109px;
 }
 
-/* Контейнер для кнопок */
+
 .controls-container {
     width: 100%;
     display: flex;
@@ -175,7 +175,7 @@ body {
     margin-top: 0px;
 }
 
-/* Кнопки управления */
+
 .player-controls {
     display: flex;
     align-items: center;
@@ -220,7 +220,7 @@ body {
 .time-info {
     font-size: 0.9em;
     color: #888;
-    min-width: 25px; /* Уменьшаем для longer дорожки */
+    min-width: 25px; 
     text-align: center;
     flex-shrink: 0;
 }
@@ -233,7 +233,7 @@ body {
     cursor: pointer;
     transition: height 0.2s ease;
     position: relative;
-    min-width: 300px; /* Увеличиваем минимальную длину дорожки */
+    min-width: 300px; 
 }
 
 .progress-bar:hover {
@@ -248,7 +248,7 @@ body {
     transition: width 0.1s ease;
 }
 
-/* Правая секция: громкость */
+
 .right-section {
     display: flex;
     align-items: flex-start;
@@ -297,10 +297,10 @@ body {
     background-color: #1ed760;
 }
 
-/* Анимации */
 
 
-/* Адаптивность для мобильных */
+
+
 @media (max-width: 768px) {
     .container {
         padding: 20px;
@@ -395,3 +395,4 @@ body {
     }
     
 }
+
