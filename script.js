@@ -11,8 +11,8 @@ const volumeSlider = document.querySelector('.volume-slider');
 
 
 const track = {
-    title: "айсберг",
-    artist: "tewiq, тёмный принц",
+    title: "овердоз",
+    artist: "тёмный принц",
     audioFile: "music/song1.mp3",
     coverImage: "covers/cover1.jpg"
 };
