@@ -11,8 +11,8 @@ const volumeSlider = document.querySelector('.volume-slider');
 
 
 const track = {
-    title: "овердоз",
-    artist: "тёмный принц",
+    title: "⨢M̟A̟Y̟H̟E̟M̟⨢",
+    artist: "узбекский принц",
     audioFile: "music/song1.mp3",
     coverImage: "covers/cover1.jpg"
 };
